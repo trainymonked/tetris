@@ -59,21 +59,36 @@ export default class Game {
   }
 
   rotatePiece() {
+    this.rotateBlocks();
+
+    if (this.hasCollision()) {
+      this.rotateBlocks(false);
+    }
+  }
+
+  rotateBlocks(clockwise = true) {
     const blocks = this.activePiece.blocks;
     const length = blocks.length;
+    const x = Math.floor(length / 2);
+    const y = length - 1;
 
-    const temp = [];
-    for (let i = 0; i < length; i++) {
-      temp[i] = Array.from({length}).fill(0);
-    }
+    for (let i = 0; i < x; i++) {
+      for (let j = i; j < y - 1; j++) {
+        const temp = blocks[i][j];
 
-    for (let y = 0; y < length; y++) {
-      for (let x = 0; x < length; x++) {
-        temp[x][y] = blocks[length - 1 - y][x];
+        if (clockwise) {
+          blocks[i][j] = blocks[y - j][i];
+          blocks[y - j][i] = blocks[y - i][y - j];
+          blocks[y - i][y - j] = blocks[j][y - i];
+          blocks[j][y - 1] = temp;
+        } else {
+          blocks[i][j] = blocks[j][y - i];
+          blocks[j][y - i] = blocks[y - i][y - j];
+          blocks[y - i][y - j] = blocks[y - j][i];
+          blocks[y - j][i] = temp;
+        }
       }
     }
-
-    this.activePiece.blocks = temp;
   }
 
   hasCollision() {
