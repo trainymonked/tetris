@@ -21,6 +21,7 @@ body {
 .cr {
   padding: 8px 0;
   background-color: #383838;
+  text-align: center;
 }
 
 .cr-text {
