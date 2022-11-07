@@ -17,3 +17,24 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+.cr {
+  padding: 8px 0;
+  background-color: #383838;
+}
+
+.cr-text {
+  font-family: 'Press Start 2P', Consolas, monospace;
+  color: #ffffff;
+}
+
+.cr-link {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cr-link:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
