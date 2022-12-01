@@ -125,7 +125,7 @@ export default class Game {
         ];
         break;
       default:
-        throw new Error('Неизвестный тип фигуры');
+        throw new Error('Unknown figure type');
     }
 
     piece.x = Math.floor((10 - piece.blocks[0].length) / 2);

@@ -45,11 +45,11 @@ export default class View {
   }
 
   renderStartScreen() {
-    this.context.fillStyle = 'white';
     this.context.font = '18px "Press Start 2P"';
+    this.context.fillStyle = 'white';
     this.context.textAlign = 'center';
     this.context.textBaseline = 'middle';
-    this.context.fillText('Press ENTER to Start', this.width / 2, this.height / 2);
+    setTimeout(() => this.context.fillText('Press ENTER to Start', this.width / 2, this.height / 2), 500);
   }
 
   renderPauseScreen() {
