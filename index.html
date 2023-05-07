@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tetris</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div id="root">
-    <h1>
-      <span style="color: red">T</span>
-      <span style="color: orange">E</span>
-      <span style="color: yellow">T</span>
-      <span style="color: green">R</span>
-      <span style="color: cyan">I</span>
-      <span style="color: purple">S</span>
-    </h1>
-  </div>
-  
-  <div class="cr">
-    <p class="cr-text">© 2023, MADE WITH <img src="love.png" alt="LOVE"> FOR <a class="cr-link" target="_blank" href="https://trainymonked.github.io">trainymonked.github.io</a></p>
-  </div>
 
-  <script defer src="index.js" type="module"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="root">
+        <h1>
+            <span style="color: red">T</span>
+            <span style="color: orange">E</span>
+            <span style="color: yellow">T</span>
+            <span style="color: green">R</span>
+            <span style="color: cyan">I</span>
+            <span style="color: purple">S</span>
+        </h1>
+    </div>
+
+    <div class="cr">
+        <p class="cr-text">© <span id='year'></span>, MADE WITH <img src="love.png" alt="LOVE"> FOR <a class="cr-link"
+                target="_blank" href="https://trainymonked.github.io">trainymonked.github.io</a>
+        </p>
+    </div>
+
+    <script defer src="index.js" type="module"></script>
 </body>
+
 </html>

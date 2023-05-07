@@ -1,40 +1,74 @@
 body {
-  margin: 0;
-  background-color: black;
+    margin: 0;
+    background-color: #000;
 }
 
 #root {
-  padding: 3rem;
-  text-align: center;
+    padding: 3rem;
+    text-align: center;
 }
 
 #root h1 {
-  font-family: 'Press Start 2P', Consolas, monospace;
-  color: white;
+    font-family: 'Press Start 2P', Consolas, monospace;
+    color: #fff;
 }
 
 #root canvas {
-  display: block;
-  margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#mobile {
+    font-family: 'Press Start 2P', Consolas, monospace;
+    color: #fff;
+    margin-top: 5rem;
 }
 
 .cr {
-  padding: 8px 0;
-  text-align: center;
+    padding: 8px 0;
+    text-align: center;
 }
 
 .cr-text {
-  font-family: 'Press Start 2P', Consolas, monospace;
-  color: #ffffff;
+    font-family: 'Press Start 2P', Consolas, monospace;
+    color: #fff;
 }
 
 .cr-link {
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .cr-link:hover {
-  font-style: italic;
-  text-decoration: underline;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+    #root {
+        padding: 1rem;
+    }
+    #root h1 {
+        margin-top: 0.5rem;
+    }
+    .cr-text {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 500px) {
+    #root {
+        padding: 2.5rem;
+    }
+    #root h1 {
+        margin-top: 1rem;
+        font-size: medium;
+    }
+    .cr {
+        padding: 0;
+    }
+    .cr-text {
+        font-size: xx-small;
+    }
 }
